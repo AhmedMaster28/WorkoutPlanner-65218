@@ -18,15 +18,14 @@ def calculate_bmi(weight_kg, height_cm):
     return weight_kg / (height_m ** 2)
 
 def suggest_plan(bmi):
-    """Return a tuple (workout_minutes, diet_plan)."""
     if bmi < 18.5:
-        return (30, "High-protein diet with healthy fats")
+        return (30, "High-protein diet", "Home")
     elif bmi < 25:
-        return (45, "Balanced diet: carbs, proteins, fats")
+        return (45, "Balanced diet", "Home")
     elif bmi < 30:
-        return (60, "Low-carb diet with moderate protein")
+        return (60, "Low-carb diet", "Gym")
     else:
-        return (75, "Calorie-deficit diet, focus on veggies")
+        return (75, "Calorie-deficit diet", "Gym")
 
 def main():
     print("=== Workout Time Planner ===")
@@ -45,6 +44,10 @@ def main():
     print(f"\nYour BMI is: {bmi:.2f}")
     print(f"Suggested daily workout: {workout_min} minutes")
     print(f"Basic diet plan: {diet}")
+    workout_min, diet, location = suggest_plan(bmi)
+    print(f"Suggested daily workout: {workout_min} minutes ({location})")
+
 
 if __name__ == "__main__":
     main()
+    
