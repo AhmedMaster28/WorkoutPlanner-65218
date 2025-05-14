@@ -8,3 +8,7 @@
 
 # usage instructions
 # As a user give the height in the cm and weight in the kg and it will be giving you the BMI results
+
+
+# UPDATE IN THE CODE
+# The updated code contains the updated version of the bmi like it will tell the user whether the user should join the gym or stay at home and do exercises at home or at gym
